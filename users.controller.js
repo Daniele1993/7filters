@@ -1,4 +1,4 @@
-angular.module('app').controller('UsersCtrl', function ($scope,$interval) {
+angular.module('app').controller('UsersCtrl', function ($scope, $interval, utentiService){
 
     $scope.titolo = "lista utenti";
 
@@ -6,5 +6,6 @@ angular.module('app').controller('UsersCtrl', function ($scope,$interval) {
         $scope.data = new Date();
     }, 1000);
 
+    $scope.utenti = utentiService.getUtenti();
 
 });

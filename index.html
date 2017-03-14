@@ -54,7 +54,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr ng-repeat="utente in utenti track by $index">
+                    <td>{{utente.nome}}</td>
+                    <td>{{utente.cognome}}</td>
+                    <td>{{utente.sesso}}</td>
+                    <td>{{utente.lingua}}</td>
                     </tr>
                 </tbody>
             </table>

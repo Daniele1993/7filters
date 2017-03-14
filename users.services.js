@@ -1,4 +1,5 @@
 //SCRIVERE UL SERVICE CON UN METODO CHE RITORNA LA LISTA UTENTI
+angular.module('app').service('utentiService', function(){
 
 var utenti = [{
     "nome": "Samuel",
@@ -100,4 +101,14 @@ var utenti = [{
     "cognome": "Henderson",
     "sesso": "Femmina",
     "lingua": "Italiano"
-}]
+}];
+ 
+ var getUtenti = function(){
+     return utenti;
+ };
+ 
+ return{
+        getUtenti:getUtenti
+ }
+})
+
