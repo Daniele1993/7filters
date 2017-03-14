@@ -1,8 +1,10 @@
-angular.module('app').controller('UsersCtrl', function ($scope) {
+angular.module('app').controller('UsersCtrl', function ($scope,$interval) {
 
     $scope.titolo = "lista utenti";
 
-    $scope.data = new Date();
+    $interval(function(){
+        $scope.data = new Date();
+    }, 1000);
 
 
 });
