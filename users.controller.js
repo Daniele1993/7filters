@@ -7,5 +7,6 @@ angular.module('app').controller('UsersCtrl', function ($scope, $interval, utent
     }, 1000);
 
     $scope.utenti = utentiService.getUtenti();
+    $scope.lingua = "tutte"
 
 });
