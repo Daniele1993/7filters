@@ -20,7 +20,7 @@
             <h1>{{titolo | uppercase}}</h1>
             <h2>Esercizio del giorno {{data |date:'dd/mm/yyyy (HH:mm:ss)' }}</h2>
             <label>Ricerca generica</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" ng-model="ricerca">
             <label>Ricerca per lingua</label>
             <select class="form-control">
                <option>Tutte</option>
@@ -44,7 +44,7 @@
                     <input type="radio"  value="Femmina"> Femmina
                 </label>
             </div>
-            <table class="table">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -54,7 +54,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="utente in utenti track by $index">
+                    <tr ng-repeat="utente in utenti | filter:ricerca">
                     <td>{{utente.nome}}</td>
                     <td>{{utente.cognome}}</td>
                     <td>{{utente.sesso}}</td>
