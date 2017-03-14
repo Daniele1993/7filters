@@ -111,6 +111,7 @@ var utenti = [{
 
  return{
         getUtenti:getUtenti
+        
  }
 })
 

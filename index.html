@@ -54,9 +54,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="utente in (risultato = (utenti|filter:ricerca
+                    <tr ng-repeat="utente in (risultato = (utenti|filter:ricerca 
                                                                  |filterLingua:lingua
-                                                                 |filterSesso:sesso))"> <!--filtro di ricerca per sesso e lingua-->
+                                                                 |filterSex:sesso))">   <!--filtro di ricerca per sesso e lingua-->
                     <td>{{utente.nome}}</td>
                     <td>{{utente.cognome}}</td>
                     <td>{{utente.sesso}}</td>
